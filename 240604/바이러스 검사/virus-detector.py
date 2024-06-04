@@ -13,10 +13,21 @@
 import sys
 input = sys.stdin.readline
 restaurant = int(input())
-customer = []
-for _ in range(restaurant):
-    customer.append(int(input()))
+customer = list(map(int,input().split()))
 leader,member = map(int,input().split())
+cnt = 0 
+
+while customer:
+    temp = customer[0]
+    temp -= leader
+    cnt +=1
+    if temp >0: 
+        cnt += (temp // member)
+        if temp % member !=0:
+            cnt += 1
+
+    customer.pop(0)    
 
 
-print(customer)
+
+print(cnt)
