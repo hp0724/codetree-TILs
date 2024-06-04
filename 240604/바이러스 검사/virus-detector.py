@@ -11,9 +11,10 @@
 # 검사팀원이 검사할수 있는 최대 고객 수 
 
 import sys
+from collections import deque
 input = sys.stdin.readline
 restaurant = int(input())
-customer = list(map(int,input().split()))
+customer = deque(list(map(int,input().split())))
 leader,member = map(int,input().split())
 cnt = 0 
 
@@ -26,8 +27,6 @@ while customer:
         if temp % member !=0:
             cnt += 1
 
-    customer.pop(0)    
-
-
+    customer.popleft()    
 
 print(cnt)
