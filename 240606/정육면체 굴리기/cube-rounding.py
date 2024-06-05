@@ -32,20 +32,11 @@ elif graph[y][x] != 0:
 for d in direction:
     nx = x + dx[d]
     ny = y + dy[d]
-    #print("before",dice)
-    # 동쪽 dice = [ 5,2,1,4,6,3]
-    # 서쪽 dice = [3,2,1,4,6,5]
-    # 남쪽 dice = [4,1,3,6,5,2]
-    # 북쪽 dice = [2,1,3,6,5,4]
+    
     if nx < 0 or nx >= n or ny < 0 or ny >= m :
         continue
     x = nx 
     y = ny 
-    
-    
-
-    #print(graph[y][x])
-    
     
     # 동쪽
     if d == 1:
@@ -69,5 +60,4 @@ for d in direction:
         dice[5] = graph[y][x]
         graph[y][x] = 0
 
-    #print("after",dice)
     print(dice[0])
