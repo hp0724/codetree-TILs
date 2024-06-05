@@ -33,7 +33,7 @@ for d in direction:
     nx = x + dx[d]
     ny = y + dy[d]
     
-    if nx < 0 or nx >= n or ny < 0 or ny >= m :
+    if nx < 0 or nx >= m or ny < 0 or ny >= n :
         continue
     x = nx 
     y = ny 
