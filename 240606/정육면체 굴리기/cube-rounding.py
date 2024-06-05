@@ -3,17 +3,17 @@
 # n , m , x, y , k 
 # 지도 
 # 굴리기 방향 
-
+# 처음 위치 x는 위부터 아래까지 0부터 n-1까지 차례대로 번호를 매겨 구분하며, y는 왼쪽에서 오른쪽까지 차례대로 번호를 매겨 구분합니다.
 import sys
 input = sys.stdin.readline
-
+# 1 2 3 4 
 # 동 서 북 남 
 dx = [0,1,-1,0,0]
 dy = [0,0,0,-1,1]
 
 dice = [0,0,0,0,0,0]
 
-n,m,x,y,k = map(int,input().split())
+n,m,y,x,k = map(int,input().split())
 
 graph = []
 
