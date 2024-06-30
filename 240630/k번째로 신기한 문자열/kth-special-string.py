@@ -7,7 +7,7 @@ for _ in range(n):
     array.append(input())
 
 for i in array:
-    if T in i: 
+    if i.startswith(T): 
         result.append(i)
 
 result.sort()
