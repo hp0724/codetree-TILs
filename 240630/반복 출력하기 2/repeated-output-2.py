@@ -4,4 +4,5 @@ def hello_world(n):
     print("HelloWorld")
     hello_world(n-1)
 
-hello_world(4)
+n = int(input())
+hello_world(n)
