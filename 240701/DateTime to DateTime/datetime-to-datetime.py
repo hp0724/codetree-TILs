@@ -12,10 +12,9 @@ while True:
     before_min += 1 
     if before_min > 60:
         before_min = 1
-        before_hour +=1 
-    
-    if before_hour> 23:
-        before_day += 1
-        before_hour = 0
+        before_hour +=1  
+        if before_hour> 23:
+            before_day += 1
+            before_hour = 0
 
 print(time)
