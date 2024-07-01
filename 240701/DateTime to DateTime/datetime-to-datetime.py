@@ -14,8 +14,8 @@ while True:
         before_min = 1
         before_hour +=1 
     
-    elif before_hour> 23:
+    if before_hour> 23:
         before_day += 1
         before_hour = 0
 
-print(time )
+print(time)
