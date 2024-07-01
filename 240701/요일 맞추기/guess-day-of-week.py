@@ -8,6 +8,7 @@ diff = (sum(month_day[0:m2]) + d2) - (sum(month_day[0:m1]) + d1)
 if diff < 0 :
     while diff > 0:
         diff += 7 
+    diff %= 7 
 else:
     diff %= 7 
 
