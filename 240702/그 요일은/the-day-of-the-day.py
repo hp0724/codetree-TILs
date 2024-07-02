@@ -11,7 +11,7 @@ for idx,value in enumerate(day_of_the_week):
 # 일주일 나누기 
 count = 0
 sum_day = (sum(month_day[:m2]) + d2) - (sum(month_day[:m1]) + d1)
-if idx != 0 and sum_day - idx > 0:
+if sum_day - idx > 0:
     sum_day -= idx 
     count += 1
     if sum_day >= 7:
