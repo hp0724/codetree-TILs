@@ -1,4 +1,4 @@
-month_day = [31,28,31,30,31,30,31,31,30,31,30,31]
+month_day = [31,29,31,30,31,30,31,31,30,31,30,31]
 day_of_the_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 m1,d1,m2,d2 = map(int,input().split())
 input_day_of_the_week = input()
