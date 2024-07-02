@@ -21,9 +21,7 @@ end_day = day_of_year(m2, d2)
 start_weekday_index = 0  # 월요일을 기준으로 0
 
 # 입력된 요일이 처음으로 나타나는 날짜 계산
-first_target_day = start_day + ((target_day_index - start_weekday_index) % 7)
-if first_target_day < start_day:
-    first_target_day += 7
+first_target_day = start_day + target_day_index
 
 # 요일 카운트
 count = 0
