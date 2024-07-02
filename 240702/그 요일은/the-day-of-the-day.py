@@ -12,7 +12,7 @@ target_day_index = day_of_the_week.index(input_day_of_the_week)
 
 # 입력된 시작 날짜가 해당 년도의 몇 번째 일인지 계산
 def day_of_year(month, day):
-    return sum(month_day[:month-1]) + day
+    return sum(month_day[:month]) + day
 
 start_day = day_of_year(m1, d1)
 end_day = day_of_year(m2, d2)
