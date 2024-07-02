@@ -1,5 +1,5 @@
 # 연도별 월의 일수를 리스트로 저장 (2024년은 윤년)
-month_day = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+month_day = [0,31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 # 요일 목록
 day_of_the_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
@@ -12,7 +12,7 @@ target_day_index = day_of_the_week.index(input_day_of_the_week)
 
 # 입력된 시작 날짜가 해당 년도의 몇 번째 일인지 계산
 def day_of_year(month, day):
-    return sum(month_day[:month]) + day
+    return sum(month_day[1:month]) + day
 
 start_day = day_of_year(m1, d1)
 end_day = day_of_year(m2, d2)
