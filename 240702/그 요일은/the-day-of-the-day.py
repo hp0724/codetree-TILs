@@ -10,11 +10,11 @@ for idx,value in enumerate(day_of_the_week):
 # 월요일 부터 입력 요일 까지 값 빼고 
 # 일주일 나누기 
 count = 0
-sum_day = (sum(month_day[:m2]) + d2) - (sum(month_day[:m1]) + d1)
-if sum_day - result >= 0:
-    sum_day -= result 
+diff = (sum(month_day[:m2]) + d2) - (sum(month_day[:m1]) + d1)
+if diff - result >= 0:
+    diff -= result 
     count += 1
-    if sum_day >= 7:
-        count += sum_day // 7
+    if diff >= 7:
+        count += (diff // 7)
 
 print(count)
