@@ -3,7 +3,7 @@ input = sys.stdin.readline
 n = int(input())
 max_cnt = 0
 arr = []
-cnt = 1
+cnt = 0
 
 for _ in range(n):
     arr.append(int(input()))
@@ -16,5 +16,5 @@ for i in range(n):
     else:
         max_cnt = max(max_cnt,cnt)
         cnt = 1
-
+max_cnt = max(max_cnt,cnt) 
 print(max_cnt)
