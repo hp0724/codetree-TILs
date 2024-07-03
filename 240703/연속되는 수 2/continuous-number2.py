@@ -17,8 +17,8 @@ else:
             cnt+=1 
             if i == n-1:
                 result_array.append(cnt)
-        else:
+        elif arr[i] != arr[i-1]:
             result_array.append(cnt)
-            cnt = 0
-    
-    print(max(result_array)+1)
+            cnt = 1
+        # print(result_array)
+    print(max(result_array))
