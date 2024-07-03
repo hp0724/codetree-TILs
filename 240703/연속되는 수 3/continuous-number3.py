@@ -1,7 +1,10 @@
+import sys 
+input = sys.stdin.readline
 n = int(input())
 max_cnt = 0
 arr = []
 cnt = 1
+
 for _ in range(n):
     arr.append(int(input()))
 
