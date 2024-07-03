@@ -7,6 +7,8 @@ for _ in range(n):
     a.append(int(input()))
 
 for i in range(1,n):
+    if n == 1:
+        result_array.append(cnt)
     if a[i] == a[i-1]:
         cnt+=1 
     else:
