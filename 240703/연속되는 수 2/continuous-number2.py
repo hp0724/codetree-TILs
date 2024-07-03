@@ -21,4 +21,4 @@ else:
             result_array.append(cnt)
             cnt = 0
     
-    print(max(result_array))
+    print(max(result_array)+1)
