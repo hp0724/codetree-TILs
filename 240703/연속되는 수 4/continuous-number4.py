@@ -11,5 +11,6 @@ for i in range(n):
     else: 
         max_cnt = max (cnt,max_cnt)
         cnt = 1
-
+        
+max_cnt = max (cnt,max_cnt)
 print(max_cnt)
