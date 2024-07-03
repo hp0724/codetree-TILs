@@ -1,3 +1,5 @@
+import sys 
+input = sys.stdin.readline
 binary = input()
 binary = list(map(int,binary))
 num = 0
