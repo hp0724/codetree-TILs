@@ -1,10 +1,13 @@
 n,t = map(int,input().split())
 arr = list(map(int,input().split()))
 
-max_cnt = 1 
+max_cnt = 0 
 cnt = 1 
 if len(arr) == 1:
-    print(max_cnt)
+    if arr[0] > t:
+        print(1)
+    else:
+        print(0)
 else:
     for i in range(1,n):
         if arr[i] > arr[i-1]:
