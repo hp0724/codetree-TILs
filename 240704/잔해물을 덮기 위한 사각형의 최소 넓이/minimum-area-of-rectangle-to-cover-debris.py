@@ -18,11 +18,13 @@ for i in range(MAX_R):
     for j in range(MAX_R):
         if square[i][j] == 1 :
             temp.append((i,j))
+if temp:
+    x1_min ,y1_min = min(temp)
+    x2_max ,y2_max = max(temp)
 
-x1_min ,y1_min = min(temp)
-x2_max ,y2_max = max(temp)
+    result_square_x = x2_max - x1_min + 1
+    result_square_y = y2_max - y1_min + 1 
 
-result_square_x = x2_max - x1_min + 1
-result_square_y = y2_max - y1_min + 1 
-
-print(result_square_x * result_square_y)
+    print(result_square_x * result_square_y)
+else:
+    print(0)
