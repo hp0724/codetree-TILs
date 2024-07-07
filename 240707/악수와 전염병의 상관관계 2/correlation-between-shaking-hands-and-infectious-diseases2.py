@@ -17,7 +17,6 @@ for _ in range(T):
     handshake_arr.append((t,x,y))
 
 handshake_arr.sort()
-print(handshake_arr)
 for t,x,y in handshake_arr:
     if N_arr[x] == 1 and N_handshake_cnt_arr[x]!=0:
         N_arr[y] = 1 
