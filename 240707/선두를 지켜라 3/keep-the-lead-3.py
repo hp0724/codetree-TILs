@@ -18,12 +18,15 @@ for _ in range(M):
 change_cnt = 0
 winner = ""
 for i in range(1,len(a_arr)):
-    if a_arr[i] >= b_arr[i] and winner!="a"  :
+    if a_arr[i] > b_arr[i] and winner!="a":
         change_cnt += 1 
         winner = "a"
-    elif b_arr[i] >= a_arr[i] and winner!="b" :
+    elif b_arr[i] > a_arr[i] and winner!="b":
         change_cnt += 1
         winner = "b"
+    elif a_arr[i] == b_arr[i] and winner!="same":
+        change_cnt += 1 
+        winner = "same"
 if change_cnt == 0 :
     print(0)
 else:
