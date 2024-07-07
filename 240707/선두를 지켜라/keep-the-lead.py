@@ -23,3 +23,6 @@ for i in range(len(a_arr)):
         change_cnt += 1
 
 print(change_cnt-1)
+
+if change_cnt == -1 :
+    print(0)
