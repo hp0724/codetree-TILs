@@ -18,12 +18,21 @@ for _ in range(T):
 
 handshake_arr.sort()
 for t,x,y in handshake_arr:
-    if N_arr[x] == 1 and N_handshake_cnt_arr[x]!=0:
+    if N_arr[x] == 1 and N_arr[y] == 1:
+        if N_handshake_cnt_arr[x] != 0 :
+            N_handshake_cnt_arr[x] -= 1
+        if N_handshake_cnt_arr[y] != 0:
+            N_handshake_cnt_arr[y] -= 1
+
+    elif N_arr[x] == 1 and N_handshake_cnt_arr[x]!=0:
         N_arr[y] = 1 
         N_handshake_cnt_arr[x] -= 1 
+        
     elif N_arr[y] == 1 and N_handshake_cnt_arr[y]!=0:
         N_arr[x] = 1 
         N_handshake_cnt_arr[y] -=1
 
+    
+    
 N_arr = N_arr[1:]
 print("".join(map(str,N_arr)))
