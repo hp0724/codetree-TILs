@@ -17,7 +17,7 @@ for _ in range(M):
 
 change_cnt = 0
 winner = ""
-for i in range(len(a_arr)):
+for i in range(1,len(a_arr)):
     if a_arr[i] >= b_arr[i] and winner!="a"  :
         change_cnt += 1 
         winner = "a"
@@ -27,4 +27,4 @@ for i in range(len(a_arr)):
 if change_cnt == 0 :
     print(0)
 else:
-    print(change_cnt-1)
+    print(change_cnt)
