@@ -34,7 +34,11 @@ for d,c in b_arr:
 idx = 1 
 
 while True:
+    if idx >= min(len(a_result_arr),len(b_result_arr)):
+        print(-1)
+        break
     if a_result_arr[idx] == b_result_arr[idx]:
         print(idx)
         break
+    
     idx += 1
