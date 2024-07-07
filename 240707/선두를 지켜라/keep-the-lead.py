@@ -21,8 +21,7 @@ for i in range(len(a_arr)):
         change_cnt += 1 
     elif b_arr[i] >= a_arr[i] and b_arr[i-1] < a_arr[i-1]:
         change_cnt += 1
-
-print(change_cnt-1)
-
-if change_cnt == -1 :
+if change_cnt == 0 :
     print(0)
+else:
+    print(change_cnt-1)
