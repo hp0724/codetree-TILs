@@ -5,22 +5,22 @@ c= int(c)
 
 array = [[0]*n for _ in range(n)]
 mapper = {
-    "R" : 0 ,
+    "R" : 0,
     "D" : 1,
     "U" : 2,
     "L" : 3
 }
 dx = [0,-1,1,0]
-dy = [1,0,0,-1]
+dy = [-1,0,0,1]
 cnt = 0
 dir_num = mapper[d]
 
 
 
-while cnt != t+1:
+while cnt != t:
     nx = r + dx[dir_num] 
     ny = c + dy[dir_num]
-    if nx < 0 or nx >=n or ny < 0 or ny >=n:
+    if nx < 0 or nx >n or ny < 0 or ny >n:
         dir_num = 3 - dir_num
         cnt += 1
     
