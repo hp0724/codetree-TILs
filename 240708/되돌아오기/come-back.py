@@ -28,7 +28,5 @@ for _ in range(N):
 
     if x== 0 and y == 0:
         break
-if sum_c == cnt :
-    print(-1)
-else:
-    print(cnt)
+ 
+print(cnt)
