@@ -1,7 +1,6 @@
 n = int(input()) # n = 3 
 arr = [input() for _ in range(n)]
 
-print(arr)
 start_num = int(input())
 
 # 주어진 숫자에 따라
