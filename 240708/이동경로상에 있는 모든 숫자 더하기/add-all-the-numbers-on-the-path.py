@@ -14,7 +14,6 @@ dy = [0,1,0,-1]
 cur_direection = 0
 
 result = arr[x][y]
-arr[x][y] = 0
 def in_range(x,y):
     return 0 <= x < N and 0 <= y < N 
 
@@ -34,6 +33,5 @@ for c in cmd_array:
         if in_range(nx,ny):
             x = nx 
             y = ny 
-    result += arr[x][y]
-    arr[x][y] = 0
+            result += arr[x][y]
 print(result)
