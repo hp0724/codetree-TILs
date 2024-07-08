@@ -29,6 +29,7 @@ for _ in range(N):
     if x== 0 and y == 0:
         break
 
-print(cnt)
-if x!=0 and y!=0:
+if x ==0 and y ==0 :
+    print(cnt)
+else:
     print(-1)
