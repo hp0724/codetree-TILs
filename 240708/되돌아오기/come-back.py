@@ -14,9 +14,11 @@ dx = [-1,0,0,1]
 dy = [0,1,-1,0]
 
 cnt = 0
+sum_c = 0
 for _ in range(N):
     d,c = input().split()
     c = int(c)
+    sum_c += c 
     for _ in range(c):
         x += dx[mapper[d]]
         y += dy[mapper[d]]
@@ -26,4 +28,7 @@ for _ in range(N):
 
     if x== 0 and y == 0:
         break
-print(cnt)
+if sum_c == cnt :
+    print(-1)
+else:
+    print(cnt)
