@@ -22,6 +22,7 @@ while cnt != t+1:
     ny = c + dy[dir_num]
     if nx < 0 or nx >=n or ny < 0 or ny >=n:
         dir_num = 3 - dir_num
+        cnt += 1
     
     r = r + dx[dir_num] 
     c = c + dy[dir_num]
