@@ -15,7 +15,7 @@ for i in range(1,n-1):
     for j in range(len(arr)-1):
         x1,y1 = arr[j]
         x2,y2 = arr[j+1]
-        temp_result += (abs(x2-x1) + abs(y2-y1))
+        temp_result += (abs(x1-x2) + abs(y1-y2))
     result = min(result,temp_result)
     arr.insert(i,temp)
 print(result)
