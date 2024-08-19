@@ -5,12 +5,14 @@
 n = int(input())
 arr = []
 result = 1e9
-temp_result = 0
+
 for _ in range(n):
     x,y = map(int,input().split())
     arr.append((x,y))
 
+# 1번하고 N번빼고 가능 
 for i in range(1,n-1):
+    temp_result = 0
     temp = arr.pop(i)
     for j in range(len(arr)-1):
         x1,y1 = arr[j]
