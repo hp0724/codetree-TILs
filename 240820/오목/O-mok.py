@@ -16,10 +16,15 @@ for i in range(n-4):
         elif arr[i][j] == 1 and arr[i+1][j] == 1 and arr[i+2][j] == 1 and arr[i+3][j] == 1 and arr[i+4][j] == 1 :
             black_win = True
             result = [i+3,j+1] 
-        # 검정돌 대각선 
+        # 검정돌 오른쪽 아래 대각선 
         elif arr[i][j] == 1 and arr[i+1][j+1] == 1 and arr[i+2][j+2] == 1 and arr[i+3][j+3] == 1 and arr[i+4][j+4] == 1 :
             black_win = True
             result = [i+3,j+3]
+        # 검정동 오른쪽 윗 대각선
+        elif arr[i][j] == 1 and arr[i-1][j+1] == 1 and arr[i-2][j+2] == 1 and arr[i-3][j+3] == 1 and arr[i-4][j+4] ==  1:
+            black_win = True
+            result = [i-1,j+3]
+
         # 흰색돌 가로 
         elif arr[i][j] == 2 and arr[i][j+1] == 2 and arr[i][j+2] == 2 and arr[i][j+3] == 2 and arr[i][j+4] == 2 :
             white_win = True 
@@ -28,10 +33,14 @@ for i in range(n-4):
         elif arr[i][j] == 2 and arr[i+1][j] == 2 and arr[i+2][j] == 2 and arr[i+3][j] == 2 and arr[i+4][j] == 2 :
             white_win = True 
             result = [i+3,j+1]
-        # 흰색돌 대각선 
+        # 흰색돌 오른쪽 아래 대각선  
         elif arr[i][j] == 2 and arr[i+1][j+1] == 2 and arr[i+2][j+2] == 2 and arr[i+3][j+3] == 2 and arr[i+4][j+4] == 2 :
             white_win = True
             result = [i+3,j+3] 
+        # 흰색돌 오른쪽 윗 대각선
+        elif arr[i][j] == 2 and arr[i-1][j+1] == 2 and arr[i-2][j+2] == 2 and arr[i-3][j+3] == 2 and arr[i-4][j+4] == 2 :
+            white_win = True
+            result = [i-1,j+3]
 
 if black_win == False and white_win == False :
     print(0)
