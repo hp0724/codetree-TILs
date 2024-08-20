@@ -3,42 +3,43 @@ arr = []
 for _ in range(n) :
     arr.append(list(map(int,input().split())))
 
+
 white_win = False
 black_win = False
 result = []
-for i in range(n-4):
-    for j in range(n-4):
+for i in range(n):
+    for j in range(n):
         # 검정돌 가로 
-        if arr[i][j] == 1 and arr[i][j+1] == 1 and arr[i][j+2] == 1 and arr[i][j+3] == 1 and arr[i][j+4] == 1 :
+        if  j <= n-5 and arr[i][j] == 1 and arr[i][j+1] == 1 and arr[i][j+2] == 1 and arr[i][j+3] == 1 and arr[i][j+4] == 1:
             black_win_win = True
             result = [i+1,j+3] 
         # 검정돌 세로 
-        elif arr[i][j] == 1 and arr[i+1][j] == 1 and arr[i+2][j] == 1 and arr[i+3][j] == 1 and arr[i+4][j] == 1 :
+        elif i <= n-5 and arr[i][j] == 1 and arr[i+1][j] == 1 and arr[i+2][j] == 1 and arr[i+3][j] == 1 and arr[i+4][j] == 1:
             black_win = True
             result = [i+3,j+1] 
         # 검정돌 오른쪽 아래 대각선 
-        elif arr[i][j] == 1 and arr[i+1][j+1] == 1 and arr[i+2][j+2] == 1 and arr[i+3][j+3] == 1 and arr[i+4][j+4] == 1 :
+        elif i <=n-5 and j <=n-5 and arr[i][j] == 1 and arr[i+1][j+1] == 1 and arr[i+2][j+2] == 1 and arr[i+3][j+3] == 1 and arr[i+4][j+4] == 1:
             black_win = True
             result = [i+3,j+3]
         # 검정동 오른쪽 윗 대각선
-        elif arr[i][j] == 1 and arr[i-1][j+1] == 1 and arr[i-2][j+2] == 1 and arr[i-3][j+3] == 1 and arr[i-4][j+4] ==  1:
+        elif i >= 5 and j <=n-5 and arr[i][j] == 1 and arr[i-1][j+1] == 1 and arr[i-2][j+2] == 1 and arr[i-3][j+3] == 1 and arr[i-4][j+4] == 1:
             black_win = True
             result = [i-1,j+3]
 
         # 흰색돌 가로 
-        elif arr[i][j] == 2 and arr[i][j+1] == 2 and arr[i][j+2] == 2 and arr[i][j+3] == 2 and arr[i][j+4] == 2 :
+        elif arr[i][j] == 2 and arr[i][j+1] == 2 and arr[i][j+2] == 2 and arr[i][j+3] == 2 and arr[i][j+4] == 2 and j <= n-4:
             white_win = True 
             result = [i+1,j+3] 
         # 흰색돌 세로 
-        elif arr[i][j] == 2 and arr[i+1][j] == 2 and arr[i+2][j] == 2 and arr[i+3][j] == 2 and arr[i+4][j] == 2 :
+        elif arr[i][j] == 2 and arr[i+1][j] == 2 and arr[i+2][j] == 2 and arr[i+3][j] == 2 and arr[i+4][j] == 2 and i <= n-4 :
             white_win = True 
             result = [i+3,j+1]
         # 흰색돌 오른쪽 아래 대각선  
-        elif arr[i][j] == 2 and arr[i+1][j+1] == 2 and arr[i+2][j+2] == 2 and arr[i+3][j+3] == 2 and arr[i+4][j+4] == 2 :
+        elif arr[i][j] == 2 and arr[i+1][j+1] == 2 and arr[i+2][j+2] == 2 and arr[i+3][j+3] == 2 and arr[i+4][j+4] == 2 and i <=n-4 and j <=n-4:
             white_win = True
             result = [i+3,j+3] 
         # 흰색돌 오른쪽 윗 대각선
-        elif arr[i][j] == 2 and arr[i-1][j+1] == 2 and arr[i-2][j+2] == 2 and arr[i-3][j+3] == 2 and arr[i-4][j+4] == 2 :
+        elif arr[i][j] == 2 and arr[i-1][j+1] == 2 and arr[i-2][j+2] == 2 and arr[i-3][j+3] == 2 and arr[i-4][j+4] == 2  and i >= 4 and j <=n-4:
             white_win = True
             result = [i-1,j+3]
 
