@@ -18,10 +18,13 @@ for a in arr:
         position[position_idx] = 2
 result = 0
 # 16 - 6 = 10
-for i in range(0,len(position)-K):
-    temp = 0
-    for j in range(i,i+K+1):
-        temp += position[j]
-    result = max(result,temp)
+if len(position) <= K:
+    result = sum(position)
+else:
+    for i in range(0,len(position)-K):
+        temp = 0
+        for j in range(i,i+K+1):
+            temp += position[j]
+        result = max(result,temp)
 
 print(result)
