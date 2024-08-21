@@ -6,7 +6,7 @@ for _ in range(n):
 ans = 0 
 for i in range(n):
     for j in range(n-2):
-        for k in range(i+1,n):
+        for k in range(i+2,n):
             for l in range(n-2):
                 ans = max(ans,(arr[i][j] + arr[i][j+1] + arr[i][j+2]) + (arr[k][l] + arr[k][l+1] + arr[k][l+2]))
 
