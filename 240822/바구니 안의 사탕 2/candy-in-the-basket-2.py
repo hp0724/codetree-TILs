@@ -14,7 +14,10 @@ for _ in range(N):
 placed = [0] * (max_idx+1) 
 
 for cnt,idx in arr:
-    placed[idx] = cnt 
+    if placed[idx] != 0:
+        placed[idx] += cnt 
+    else:
+        placed[idx] = cnt 
 
 result = 0 
 for i in range(max_idx - 2*K+1): 
