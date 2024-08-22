@@ -18,7 +18,6 @@ for cnt,idx in arr:
 
 result = 0 
 for i in range(max_idx - 2*K): 
-    print(i,i+2*K)
     result = max(result,sum(placed[i:i+2*K+1]))
 
 print(result)
