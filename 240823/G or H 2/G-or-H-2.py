@@ -16,9 +16,9 @@ for _ in range(n):
 max_len = 0 
 for i in range(MAX_NUM+1):
     for j in range(i+1,MAX_NUM+1):
-        # i 와 j 위치에 사람이 있는지 확인 
-        if arr[i] == 0 or arr[j] == 0:
-            continue
+        # # i 와 j 위치에 사람이 있는지 확인 
+        # if arr[i] == 0 or arr[j] == 0:
+        #     continue
         
         cnt_g = 0
         cnt_h = 0
