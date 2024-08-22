@@ -20,7 +20,10 @@ for cnt,idx in arr:
         placed[idx] = cnt 
 
 result = 0 
-for i in range(max_idx - 2*K+1): 
-    result = max(result,sum(placed[i:i+2*K+1]))
+if 2*K >= max_idx:
+    result = sum(placed)
+else:
+    for i in range(max_idx - 2*K+1): 
+        result = max(result,sum(placed[i:i+2*K+1]))
 
 print(result)
