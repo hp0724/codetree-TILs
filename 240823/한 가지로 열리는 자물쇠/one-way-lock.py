@@ -11,11 +11,10 @@ cnt = 0
 total_combi = N*N*N 
 
 cnt = 0
-for i in range(arr[0],N+1):
-    for j in range(arr[1],N+1):
-        for k in range(arr[2],N+1):
-            cnt += 1 
-
-result = total_combi - cnt 
-
-print(result)
+for i in range(1,N+1):
+    for j in range(1,N+1):
+        for k in range(1,N+1):
+            if  arr[0]-2 <= i <= arr[0] +2 or arr[1]-2 <= j <= arr[1] +2  or arr[2]-2 <= k <= arr[2] +2:
+                cnt += 1 
+ 
+print(cnt)
