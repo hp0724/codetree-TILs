@@ -4,11 +4,24 @@ N,H,T = map(int,input().split())
 arr = list(map(int,input().split()))
 
 min_value = 1e6
-for i in range(N):
-    for j in range(i+T,N):
-        temp = 0
-        for k in range(i,j):
-            temp += abs(H-arr[k])
-        min_value = min(min_value,temp)
+for i in range(N-T+1):
+    temp = 0
+    for j in range(T):
+        temp += abs(H-arr[k])
+    min_value = min(min_value,temp)
 
 print(min_value)
+
+# # 입력 예제
+# N, H, T = map(int, input().split())
+# arr = list(map(int, input().split()))
+
+# min_cost = 1e6
+
+# for i in range(N - T + 1):
+#     cost = 0
+#     for j in range(T):
+#         cost += abs(arr[i + j] - H)
+#     min_cost = min(min_cost, cost)
+
+# print(min_cost)
