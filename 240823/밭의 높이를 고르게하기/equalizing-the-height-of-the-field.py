@@ -1,14 +1,18 @@
-#  N개의 밭의 높이가 주어지면 연속하게 최소 T번 이상 H높이로 나오게끔 하려고 할 때
-N,T,H = map(int,input().split())
+def min_cost_to_equalize_height(N, H, T, heights):
+    min_cost = float('inf')
 
-arr = list(map(int,input().split()))
+    for i in range(N - T + 1):
+        cost = 0
+        for j in range(T):
+            cost += abs(heights[i + j] - H)
+        min_cost = min(min_cost, cost)
 
-min_value = 1e6
-for i in range(N):
-    for j in range(i+T,N):
-        temp = 0
-        for k in range(i,j):
-            temp += abs(H-arr[k])
-        min_value = min(min_value,temp)
+    return min_cost
 
-print(min_value)
+# 입력 예제
+N, H, T = map(int, input().split())
+heights = list(map(int, input().split()))
+
+# 최소 비용 계산
+result = min_cost_to_equalize_height(N, H, T, heights)
+print(result)
