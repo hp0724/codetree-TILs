@@ -9,7 +9,6 @@ for _ in range(N):
 arr.sort()
 i = 0 
 cnt = 0
-print(arr)
 while B > 0 and i < len(arr):
     if arr[i] >= B :
         if arr[i] // 2  <= B :
