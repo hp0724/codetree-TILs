@@ -1,17 +1,18 @@
 # N개의 점들 중 정확히 하나의 점만 빼서 모든 점들을 포함하는 직사각형의 넓이를 최소 
+
 n = int(input())
 arr = []
+MAX_VALUE = 40000 * 40000 +1
 for _ in range(n):
     x,y = map(int,input().split())
     arr.append((x,y))
 
+ans = MAX_VALUE
 
-
-ans = 1e6
 
 for i in range(n):
-    min_x = 1e6
-    min_y = 1e6
+    min_x = MAX_VALUE
+    min_y = MAX_VALUE
     max_x = 0 
     max_y = 0 
     for j in range(n):
