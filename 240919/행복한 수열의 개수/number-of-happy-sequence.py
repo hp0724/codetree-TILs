@@ -17,9 +17,10 @@ for i in range(n):
         if arr[i][j-1] == arr[i][j] :
             cnt +=1 
         elif arr[i][j-1] != arr[i][j]:
-            cnt = 0
+            cnt = 1
         if cnt >= m  :
             total_cnt +=1 
+            break
 
 for i in range(n):
     cnt = 1
@@ -27,9 +28,10 @@ for i in range(n):
         if arr[j-1][i] == arr[j][i]:
             cnt +=1 
         elif arr[j-1][i] != arr[j][i]:
-            cnt = 0
+            cnt = 1
         if cnt >= m  :
             total_cnt +=1 
+            break
       
 
 if m == 1:
