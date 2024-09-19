@@ -14,13 +14,12 @@ total_cnt = 0
 for i in range(n):
     cnt = 1
     for j in range(1,n):
-        if arr[i][j-1] == arr[i][j]:
+        if arr[i][j-1] == arr[i][j] :
             cnt +=1 
         elif arr[i][j-1] != arr[i][j]:
             cnt = 0
-        if cnt >= m :
+        if cnt >= m  :
             total_cnt +=1 
-         
 
 for i in range(n):
     cnt = 1
@@ -29,7 +28,11 @@ for i in range(n):
             cnt +=1 
         elif arr[j-1][i] != arr[j][i]:
             cnt = 0
-        if cnt >= m :
+        if cnt >= m  :
             total_cnt +=1 
+      
 
+if m == 1:
+    total_cnt = 0 
+    total_cnt = n * 2 
 print(total_cnt)
