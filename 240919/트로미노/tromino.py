@@ -28,7 +28,7 @@ for i in range(n-1):
 max_cnt_3 = 0 
 for i in range(n-1):
     for j in range(m-1):
-        max_cnt_3 = max(max_cnt_3,arr[i][j] + arr[i][j+1] + arr[i+1][j+1]) 
+        max_cnt_3 = max(max_cnt_3,arr[i][j] + arr[i+1][j] + arr[i+1][j+1]) 
 
 #  *
 # **
